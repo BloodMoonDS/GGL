@@ -53,12 +53,7 @@ private Thread thread;
   public void stop() {thread.stop();}
   
   public void run() {
-	try {
-		this.window.SetImage(iconDir);
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+	this.window.SetImage(iconDir);
     this.running = true;
     boolean render = false;
     double firstTime = 0.0D;

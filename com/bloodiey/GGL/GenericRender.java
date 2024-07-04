@@ -19,9 +19,9 @@ public class GenericRender {
     this.p = ((DataBufferInt)gc.getWindow().getImage().getRaster().getDataBuffer()).getData();
   }
   
-  public void clear() {
+  public void clear(int color) {
     for (int i = 0; i < this.p.length; i++) {
-      this.p[i] = 0x000000;
+      this.p[i] = color;
       //this.p[i] = this.p[i] +i; 
     }
   }

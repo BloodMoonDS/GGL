@@ -4,6 +4,8 @@ import javax.naming.SizeLimitExceededException;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 import java.awt.BorderLayout;
 import java.awt.Canvas;
 import java.awt.Component;
@@ -41,9 +43,17 @@ public class FormClass extends JFrame {
         frame.setSize(SizeX,SizeY);
         frame.setTitle(Title);
     }
-    public void SetImage(String ImageDir) throws IOException{
+    public void SetImage(String ImageDir){
         File sourceimage = new File(ImageDir);
-        Image image = ImageIO.read(sourceimage);
+        Image image = null;
+		try {
+			image = ImageIO.read(sourceimage);
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog(null,ImageDir + " Caused an error Advanced Details: \n" + e);
+			FileSaver sav = new FileSaver();
+			sav.Writefile("FormClass Error", "Exception_ " + e);
+			e.printStackTrace();
+		}
         frame.setIconImage(image);
     }
 

@@ -11,8 +11,8 @@ public class Font {
 	public Font(String Path) {
 		FontImage = new Image(Path);
 		
-		offsets = new int[59];
-		widths = new int[59];
+		offsets = new int[149186];
+		widths = new int[149186];
 		
 		int unicode = 0;
 		
