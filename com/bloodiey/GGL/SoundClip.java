@@ -81,5 +81,17 @@ public class SoundClip {
 		return clip.isRunning();
 		
 	}
+	public Clip getClip() {
+		return clip;
+	}
+	public void setClip(Clip clip) {
+		this.clip = clip;
+	}
+	public FloatControl getGainControl() {
+		return gainControl;
+	}
+	public void setGainControl(FloatControl gainControl) {
+		this.gainControl = gainControl;
+	}
 	
 }

@@ -148,6 +148,26 @@ private Thread thread;
   public int getFps() {
 	return fps;
   }
+
+
+public SoundClip getStartChime() {
+	return StartChime;
+}
+
+
+public void setStartChime(SoundClip startChime) {
+	StartChime = startChime;
+}
+
+
+public String getIconDir() {
+	return iconDir;
+}
+
+
+public void setIconDir(String iconDir) {
+	this.iconDir = iconDir;
+}
   
   
 }

@@ -46,6 +46,20 @@ public class GenericRender {
 	    this.p[i] = this.p[i] + add; 
 	    }
 	  }
+  public void multiplycolor(int add) {
+	    for (int i = 0; i < this.p.length; i++) {
+	      //this.p[i] = 0x000000;
+	      //this.p[i] = this.p[i] +i;
+	    this.p[i] = this.p[i] * add; 
+	    }
+	  }
+  public void subtractaddcolor(int add) {
+	    for (int i = 0; i < this.p.length; i++) {
+	      //this.p[i] = 0x000000;
+	      //this.p[i] = this.p[i] +i;
+	    this.p[i] = this.p[i] - add; 
+	    }
+	  }
   
   public void drawImage(Image image,int offx,int offy) {
 	  //don't render if it is not on Screen
@@ -117,6 +131,28 @@ public class GenericRender {
 	  }
 	  
   }
+
+public int[] getP() {
+	return p;
+}
+
+public void setP(int[] p) {
+	this.p = p;
+}
+
+public Font getFont() {
+	return font;
+}
+
+public void setFont(Font font) {
+	this.font = font;
+}
+  
+  
+  
+  
+  
+  
 }
 
 
